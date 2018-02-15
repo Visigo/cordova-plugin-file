@@ -302,7 +302,7 @@ NSString* const kCDVFilesystemURLPrefix = @"cdvfile";
     [self registerFilesystem:[[CDVLocalFilesystem alloc] initWithName:@"persistent" root:self.appDataPath]];
 
     // ~/Documents/
-    self.appDocsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    self.appDocsPath = NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, YES)[0];
 
     // ~/Library/Caches/<bundle-id>/files
     self.appCachePath = [self getSupportDirectoryFor:NSCachesDirectory pathComponents:nil];
